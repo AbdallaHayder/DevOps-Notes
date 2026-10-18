@@ -1,0 +1,25 @@
+# Scalability & High Availability
+
+**Scalability** means a system can handle more workload as demand increases.
+- **Vertical scaling (scale up/down)** — make one server more powerful by adding more CPU, RAM, or storage.
+- **Horizontal scaling (scale out/in) = Elasticity** — add or remove more servers/instances to handle demand.
+
+**High Availability (HA)** means keeping the application running even if part of the system fails.
+
+### Simple Difference
+```text
+Scalability
+→ Can the system handle more load?
+
+High Availability
+→ Can the system stay online when something fails?
+```
+
+Example:
+```text
+Vertical scaling → Upgrade one worker's tools
+Horizontal scaling → Hire more workers
+High Availability → Have backups so work continues if someone is unavailable
+```
+
+A system can be highly available without scaling well, and vice versa.

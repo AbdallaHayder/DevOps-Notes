@@ -1,0 +1,25 @@
+# High Availability & Scalability for EC2
+
+AWS combines **vertical scaling, horizontal scaling, Auto Scaling, Load Balancing, and multiple Availability Zones** to build resilient applications.
+- **Vertical Scaling** — make one EC2 instance more powerful by increasing CPU, RAM, or storage. Useful up to the hardware limit.
+- **Horizontal Scaling** — add more EC2 instances instead of making one instance bigger.
+- **Auto Scaling Group (ASG)** — automatically adds or removes EC2 instances based on demand.
+- **Load Balancer** — distributes incoming traffic across multiple instances so no single server becomes overloaded.
+- **High Availability (HA)** — run instances across multiple **Availability Zones (AZs)** so the application can keep running if an instance or an entire AZ fails.
+
+### Typical Architecture
+```text
+                    Users
+                      ↓
+               Load Balancer
+                /          \
+             AZ 1           AZ 2
+              ↓              ↓
+           EC2 #1          EC2 #2
+              \              /
+               Auto Scaling Group
+```
+
+If traffic increases, the ASG can add more instances. If an instance or AZ fails, the Load Balancer sends trafic to the remaining healthy instances.
+
+**Key idea**: scalability handles **increasing demand**, while HA keeps the application **available during failures**.

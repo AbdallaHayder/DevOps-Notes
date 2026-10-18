@@ -1,0 +1,38 @@
+# Auto Scaling - Cloud Watch Alarms & Scaling
+
+**CloudWatch** monitors metrics from your application and infrastructure, while the Auto Scaling Group **(ASG)** uses those metrics to automatically adjust the number of EC2 instances.
+
+CloudWatch can monitor things such as:
+- **CPU utilisation**
+- memory usage
+- other/custom application metrics
+
+When a configured threshold is reached, a **CloudWatch Alarm** can trigger a scaling policy.
+
+### Scaling Policies
+- **Scale Out** — if demand becomes high, such as high CPU usage, the ASG launches more EC2 instances.
+- **Scale In** — when demand drops, the ASG removes unnecessary instances to reduce costs.
+```text
+High CPU
+   ↓
+CloudWatch Alarm triggered
+   ↓
+Scaling Policy
+   ↓
+ASG adds EC2 instances
+
+
+Low demand
+   ↓
+CloudWatch Alarm triggered
+   ↓
+Scaling Policy
+   ↓
+ASG removes EC2 instances
+```
+This combines monitoring + automation, allowing AWS to adjust capacity based on real-time demand.
+
+### Key Idea
+**CloudWatch watches the metrics → alarms detect conditions → scaling policies tell the ASG what action to take**.
+
+This helps maintain performance during busy periods while reducing unnecessary costs when demand is low.
