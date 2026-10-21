@@ -123,4 +123,4 @@ I checked that no EBS volumes remained in London. I kept my domain registration 
 - The ALB acts like a reception desk, forwarding requests to the web servers and returning their responses.
 - The ASG creates and replaces EC2 instances using a launch template as the recipe.
 - DNS lets users reach a website by name instead of memorizing IP addresses.
-- I initially confused DNS lookup with HTTPS traffic. DNS finds the destination IP first,
+- I initially confused DNS lookup with HTTPS traffic. DNS finds the destination IP first, then the browser connects to the ALB using HTTPS. 
