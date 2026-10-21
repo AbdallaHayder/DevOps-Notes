@@ -117,3 +117,10 @@ I checked that no EBS volumes remained in London. I kept my domain registration 
 <a href="screenshots/cleanup-vpc.png">
   <img src="screenshots/cleanup-vpc.png" alt="Confirmation that the lab VPC was deleted" width="600">
 </a>
+
+## What I Learned
+
+- The ALB acts like a reception desk, forwarding requests to the web servers and returning their responses.
+- The ASG creates and replaces EC2 instances using a launch template as the recipe.
+- DNS lets users reach a website by name instead of memorizing IP addresses.
+- I initially confused DNS lookup with HTTPS traffic. DNS finds the destination IP first,
