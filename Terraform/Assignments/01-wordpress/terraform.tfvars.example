@@ -1,0 +1,2 @@
+ami_id        = "ami-REPLACE_WITH_UBUNTU_AMI_IN_YOUR_REGION"
+instance_type = "t2.micro"
