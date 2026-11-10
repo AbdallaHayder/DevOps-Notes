@@ -1,0 +1,3 @@
+ami_id        = "REPLACE_WITH_UBUNTU_24_04_X86_64_AMI_IN_EU_WEST_2"
+instance_type = "t2.micro"
+key_name      = "REPLACE_WITH_EXISTING_EC2_KEY_PAIR_NAME"
